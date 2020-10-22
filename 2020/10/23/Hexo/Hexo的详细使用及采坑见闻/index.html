@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Hexo/Hexo的详细使用及采坑见闻 | Kejur&#39; Park</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Kejur' Park">
+    <meta name="author" content="kejur">
+    <meta name="description" content="欢迎来到 Kejur乐园" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/k.png" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Kejur&#39; Park" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">keeee</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">juuuu</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" target="_blank" rel="noopener" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" target="_blank" rel="noopener" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/k.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Kejur' Park</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-10-22T17:03:26.262Z" itemprop="datePublished">
+          2020-10-23
+      </time>
+    
+</span>
+                <h1>Hexo/Hexo的详细使用及采坑见闻</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<hr>
+<hr>
+<p>原文 <a href="https://sisibeloved.github.io/hexoBlog/2018/04/12/Github-Pages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E7%AF%87/#%E4%BF%AE%E6%94%B9%60_config.yml%60" target="_blank" rel="noopener">Github Pages部署个人博客</a></p>
+<hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>想在Github上搭建一个个人博客，在网上找了不少的文章，但有的是使用的旧版本，有的语焉不详，最后还是磕磕绊绊地搭起来了，因此写了这篇文章，对自己踩过的坑进行一个总结。水平有限，还请见谅。</p>
+<h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><hr>
+<ul>
+<li>Windows 10 教育版</li>
+<li>Node.js v8.7.0</li>
+<li>Npm v5.4.2</li>
+<li>Git v2.13.0</li>
+</ul>
+<h2 id="在GitHub上创建Github-Pages项目"><a href="#在GitHub上创建Github-Pages项目" class="headerlink" title="在GitHub上创建Github Pages项目"></a>在GitHub上创建Github Pages项目</h2><hr>
+<h3 id="1-创建新仓库"><a href="#1-创建新仓库" class="headerlink" title="1. 创建新仓库"></a>1. 创建新仓库</h3><p>Github Pages分为两类，用户或组织主页，项目主页。</p>
+<p>创建用户或组织主页，只需创建一个名称为{yourusername}.github.io的新仓库即可。这边的yourusername填写自己的用户名。Github会识别并自动将该仓库设为Github Pages。用户主页是唯一的，填其他名称只会被当成普通项目。<br>创建项目主页。先新建一个仓库，名称随意，或是使用原有的仓库都可以。在项目主页 -&gt; Settings -&gt; Options -&gt; Github Pages中，将Source选项置为master branch，然后Save，这个项目就变成一个Github Pages项目了。</p>
+<h3 id="2-分支管理"><a href="#2-分支管理" class="headerlink" title="2. 分支管理"></a>2. 分支管理</h3><p>Github Pages会自动部署静态网页文件，而上一步是将master分支作为部署的默认分支。</p>
+<p>Github Pages部署分支设置中，可以有三种设置：</p>
+<ul>
+<li>master 分支</li>
+<li>master 分支下的/doc文件夹</li>
+<li>gh-pages 分支</li>
+</ul>
+<p><strong>其中gh-pages分支的选项需要创建这个分支才会显示出来。</strong></p>
+<p>我个人是这样设置分支的：<br>新建一个blog-src分支用来管理Hexo的源代码，<br>gh-pages分支用来管理Hexo生成的静态网页文件，即部署到Github Pages上的文件，<br>master分支保留（个人习惯）。<br>你也可以另开一个项目用来管理Hexo源代码的版本。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>统一说明一下以下的代码示例，&lt;&gt;中的是必填参数，[]中的是选填参数。</p>
+<h3 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h3><blockquote>
+<p>npm install -g hexo-cli</p>
+</blockquote>
+<h3 id="2-生成Hexo项目"><a href="#2-生成Hexo项目" class="headerlink" title="2. 生成Hexo项目"></a>2. 生成Hexo项目</h3><p>在你想创建博客的文件夹中初始化Hexo。</p>
+<blockquote>
+<p>hexo init [projectname]<br>如果带了项目名称，会生成一个带有该名称的文件夹；如果没带参数，则必须在空文件夹下运行，不然会报错。</p>
+</blockquote>
+<h3 id="3-拉取Github项目到本地"><a href="#3-拉取Github项目到本地" class="headerlink" title="3. 拉取Github项目到本地"></a>3. 拉取Github项目到本地</h3><blockquote>
+<p>git clone <a href="https://github.com/yourusername/yourprojectname.git" target="_blank" rel="noopener">https://github.com/yourusername/yourprojectname.git</a><br>然后把之前生成的Hexo项目文件夹下的内容全部复制过来。关于Git的使用请自行掌握，因为贴Git的代码很容易引起各种各样的错误。最后把项目push到blog-src分支上（换成你自己的源码分支）。</p>
+</blockquote>
+<h2 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a>使用Hexo</h2><h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h3><ul>
+<li>hexo generate [-d]</li>
+<li>hexo serve [-p port]</li>
+<li>hexo deploy [-g]<br>Hexo命令大多可以缩写，如<code>hexo serve --port 5000</code>可以缩写成<code>hexo s -p 5000</code>。</li>
+</ul>
+<p>更多命令和参数可参阅<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">官方文档</a>。</p>
+<h3 id="2-编译"><a href="#2-编译" class="headerlink" title="2. 编译"></a>2. 编译</h3><p>[可选]<br>清除缓存：</p>
+<blockquote>
+<p>hexo clean<br>编译：</p>
+</blockquote>
+<blockquote>
+<p>hexo g</p>
+</blockquote>
+<h3 id="3-运行"><a href="#3-运行" class="headerlink" title="3. 运行"></a>3. 运行</h3><p>启用服务：</p>
+<blockquote>
+<p>hexo s<br>默认启动地址为<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+</blockquote>
+<p>如果4000端口被占用：</p>
+<blockquote>
+<p>hexo s -p [port]</p>
+</blockquote>
+<h3 id="4-部署"><a href="#4-部署" class="headerlink" title="4. 部署"></a>4. 部署</h3><p>在博客所在文件夹下：</p>
+<p>npm install hexo-deployer-git –save<br>这是用npm安装hexo部署到git的插件，–save会把这个包写入到package.json，切换到其他电脑时可以不需要重新安装。</p>
+<h4 id="修改-config-yml："><a href="#修改-config-yml：" class="headerlink" title="修改_config.yml："></a>修改_config.yml：</h4><blockquote>
+<p>deploy:<br> type: git<br> repo: <a href="mailto:git@github.com">git@github.com</a>:yourusername/yourprojectname.git<br> branch: gh-pages<br>将repo和branch换成自己的。</p>
+</blockquote>
+<h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><p>1.repo可以在Github上复制，但记得选 <code>Clone with SSH</code> ，只能走Git协议，走HTTPS协议会报错</p>
+<p>2.branch选择Github Pages中设置的那个分支，而不是拉取这个项目的分支</p>
+<h2 id="博文写作"><a href="#博文写作" class="headerlink" title="博文写作"></a>博文写作</h2><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── .deploy</span><br><span class="line">├── public</span><br><span class="line">├── scaffolds</span><br><span class="line">|   ├── draft.md</span><br><span class="line">|   ├── page.md</span><br><span class="line">|   └── post.md</span><br><span class="line">├── scripts</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">├── themes</span><br><span class="line">├── _config.yml</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
+<p>scaffolds：脚手架，即对应的layout生成新博文时的头信息模板</p>
+<p>source：源文件，博文会根据layout分层放置</p>
+<p>关于添加模板和草稿参看写作 | Hexo。</p>
+<h3 id="新建博文"><a href="#新建博文" class="headerlink" title="新建博文"></a>新建博文</h3><p>hexo n [layout] <filename></p>
+<h4 id="头信息"><a href="#头信息" class="headerlink" title="头信息"></a>头信息</h4><p>post的模板md：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>实际生成的md：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">RocketMQ安装及部署</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="number">-04</span><span class="number">-09</span> <span class="number">10</span><span class="string">:04:41</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>时间格式在_config.yml中设置，Hexo会根据时间来解析博文。</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>Hexo自带的默认主题是landscape，不过我们可以从Theme | Hexo或Github上找到喜欢的主题。</p>
+<h4 id="更换主题的三种方法"><a href="#更换主题的三种方法" class="headerlink" title="更换主题的三种方法"></a>更换主题的三种方法</h4><p>从Github主页下载release包，解压到themes/文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone --branch v6.0.0 https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<p>(仅限linux)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir themes&#x2F;next</span><br><span class="line">$ curl -s https:&#x2F;&#x2F;api.github.com&#x2F;repos&#x2F;theme-next&#x2F;hexo-theme-next&#x2F;releases&#x2F;latest | grep tarball_url | cut -d &#39;&quot;&#39; -f 4 | wget -i - -O- | tar -zx -C themes&#x2F;next --strip-components&#x3D;1</span><br></pre></td></tr></table></figure>
+<p>设置主题<br>在项目的_config.yml中，将theme：改成themes/下对应文件夹的名称。如果是解压出来的“hexo-theme-next-6.1.0”就写“hexo-theme-next-6.1.0”，如果是自建的“next”就写“next”。</p>
+<h4 id="更换Next主题"><a href="#更换Next主题" class="headerlink" title="更换Next主题"></a>更换Next主题</h4><p>Next是Hexo最受欢迎的主题之一，不过我在使用的时候发现Github主页上v6.0.0的文档并不详尽，官网也还没上线，旧有的文档可以借鉴，但有些小地方还是会有差别。下面用v5和v6来区分新版本。</p>
+<p>v5的文档地址</p>
+<p>旧的主页（更新到v5.1.2）:<br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a></p>
+<p>新的主页（v6.0.0之后从这儿开始更新）:<br><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+<h4 id="配置Next主题"><a href="#配置Next主题" class="headerlink" title="配置Next主题"></a>配置Next主题</h4><p>Next版本 ： v6.1.0</p>
+<p>修改主题的_config.yml（注意区分项目和主题）。整个文件有一千行，各种配置项非常丰富，而且配上了大量的注释，我也只是挑了一小部分，大家可以按需修改。</p>
+<p>切换风格<br>官方提供了四种风格，各有千秋。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Scheme Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="语言选择"><a href="#语言选择" class="headerlink" title="语言选择"></a>语言选择</h4><p>在项目的_config.yml中修改language选项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 写法1</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="comment"># 写法2，会使用最上面一种语言</span></span><br><span class="line"><span class="attr">language:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">_en</span></span><br></pre></td></tr></table></figure>
+<p>与v5不同的是语言的写法，简体中文是zh-CN，英文是_en。语言文件位于主题的language/文件夹下，对应的yml文件的名称就是语言的名称，可以修改对应的语言文件来修改一些指定字段的表述，也可以自定义对应语言的字段。可以参考国际化 | Hexo。</p>
+<h4 id="社交页面"><a href="#社交页面" class="headerlink" title="社交页面"></a>社交页面</h4><p>按需要解除注释并修改。下方的icons_only是’只显示图标’，我觉得比较简洁就改为true了。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/yourname</span> <span class="string">||</span> <span class="string">github</span></span><br><span class="line">  <span class="attr">E-Mail:</span> <span class="string">yourname@youremail.com</span> <span class="string">||</span> <span class="string">envelope</span></span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line"><span class="attr">social_icons:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">icons_only:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">transition:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Dependencies: exturl: true in Tags Settings section below.</span></span><br><span class="line">  <span class="comment"># To encrypt links above use https://www.base64encode.org</span></span><br><span class="line">  <span class="comment"># Example encoded link: `GitHub: aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ= || github`</span></span><br><span class="line">  <span class="attr">exturl:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Follow me on GitHub banner in right-top corner.</span></span><br><span class="line"><span class="comment"># Usage: `permalink || title`</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the title and aria-label name.</span></span><br><span class="line"><span class="comment">#github_banner: https://github.com/yourname || Follow me on GitHub</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="1-Github发送邮件-编译未通过"><a href="#1-Github发送邮件-编译未通过" class="headerlink" title="1. Github发送邮件 - 编译未通过"></a>1. Github发送邮件 - 编译未通过</h3><p>The page build failed for the master branch with the following error:</p>
+<p>The tag fancybox on line 77 in themes/landscape/README.md is not a recognized Liquid tag.</p>
+<p>见修改_config.yml<br>选择Github Pages分支<br>不要使用Git直接推送，应该在_config.yml中设置deploy的配置，然后使用hexo d -g命令进行推送</p>
+<h3 id="2-hexo-d-g失败"><a href="#2-hexo-d-g失败" class="headerlink" title="2. hexo d -g失败"></a>2. hexo d -g失败</h3><p>error: failed to execute prompt script (exit code 1)<br>fatal: could not read Username for ‘<a href="https://github.com&#39;" target="_blank" rel="noopener">https://github.com&#39;</a>: No error<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>见修改_config.yml<br>将HTTPS协议改成Git协议，注意github.com后面，HTTPS是/，Git是:</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2020/10/22/MySQL/MySQL%20%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E6%80%A7%E7%9A%84%E5%AE%9E%E7%8E%B0/">
+        MySQL 事务隔离性的实现 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By kejur. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" target="_blank" rel="noopener" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
