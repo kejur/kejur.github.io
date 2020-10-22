@@ -33,6 +33,8 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 
 ``` bash
 $ hexo deploy
+
+建议：$ hexo d -g
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)

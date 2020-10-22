@@ -1,4 +1,0 @@
-https://github.com/molavec/hexo-theme-aircv.git
-
-https://github.com/izhaoo/hexo-theme-zhaoo.git
-
