@@ -1,9 +1,11 @@
 ---
-
+title: Hexo的详细使用及采坑见闻
+date: 2020-10-23 01:29
+tags: hexo
 ---
 
 
-原文 [Github Pages部署个人博客](https://sisibeloved.github.io/hexoBlog/2018/04/12/Github-Pages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E7%AF%87/#%E4%BF%AE%E6%94%B9%60_config.yml%60)
+> 原文 [Github Pages部署个人博客](https://sisibeloved.github.io/hexoBlog/2018/04/12/Github-Pages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E7%AF%87/#%E4%BF%AE%E6%94%B9%60_config.yml%60)
 
 
 ---
@@ -53,10 +55,12 @@ master分支保留（个人习惯）。
 在你想创建博客的文件夹中初始化Hexo。
 
 > hexo init [projectname]
+
 如果带了项目名称，会生成一个带有该名称的文件夹；如果没带参数，则必须在空文件夹下运行，不然会报错。
 
 ### 3. 拉取Github项目到本地
 > git clone https://github.com/yourusername/yourprojectname.git
+
 然后把之前生成的Hexo项目文件夹下的内容全部复制过来。关于Git的使用请自行掌握，因为贴Git的代码很容易引起各种各样的错误。最后把项目push到blog-src分支上（换成你自己的源码分支）。
 
 ## 使用Hexo
@@ -74,29 +78,40 @@ Hexo命令大多可以缩写，如`hexo serve --port 5000`可以缩写成`hexo s
 清除缓存：
 
 > hexo clean
+
 编译：
 
 > hexo g
+
 ### 3. 运行
 启用服务：
 
 > hexo s
+
 默认启动地址为http://localhost:4000/
 
 如果4000端口被占用：
 
 > hexo s -p [port]
+
 ### 4. 部署
 在博客所在文件夹下：
 
+``` s
 npm install hexo-deployer-git --save
+```
+
 这是用npm安装hexo部署到git的插件，--save会把这个包写入到package.json，切换到其他电脑时可以不需要重新安装。
 
 #### 修改_config.yml：
->deploy:
->  type: git
->  repo: git@github.com:yourusername/yourprojectname.git
->  branch: gh-pages
+
+``` yaml
+deploy:
+  type: git
+  repo: git@github.com:yourusername/yourprojectname.git
+  branch: gh-pages
+```
+
 将repo和branch换成自己的。
 
 ##### 注意：
@@ -107,7 +122,8 @@ npm install hexo-deployer-git --save
 
 ## 博文写作
 ### 项目结构
-```
+
+``` tree
 .
 ├── .deploy
 ├── public
@@ -130,7 +146,9 @@ source：源文件，博文会根据layout分层放置
 关于添加模板和草稿参看写作 | Hexo。
 
 ### 新建博文
-hexo n [layout] <filename>
+
+> hexo n [layout] <filename>
+
 #### 头信息
 post的模板md：
 
@@ -266,7 +284,7 @@ The tag fancybox on line 77 in themes/landscape/README.md is not a recognized Li
 
 见修改_config.yml
 选择Github Pages分支
-不要使用Git直接推送，应该在_config.yml中设置deploy的配置，然后使用hexo d -g命令进行推送
+不要使用Git直接推送，应该在_config.yml中设置deploy的配置，然后使用 `hexo d -g` 命令进行推送
 
 ### 2. hexo d -g失败
 
