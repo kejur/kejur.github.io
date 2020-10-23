@@ -187,21 +187,29 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="谁提出事务的传播性这个概念的呢？"><a href="#谁提出事务的传播性这个概念的呢？" class="headerlink" title="谁提出事务的传播性这个概念的呢？"></a>谁提出事务的传播性这个概念的呢？</h2><hr>
-<p>是的，就是spring提出的</p>
-<h2 id="为什么提出呢？"><a href="#为什么提出呢？" class="headerlink" title="为什么提出呢？"></a>为什么提出呢？</h2><hr>
-<p>解决事务嵌套的问题</p>
+      		<h2 id="谁提出事务的传播性这个概念的呢？"><a href="#谁提出事务的传播性这个概念的呢？" class="headerlink" title="谁提出事务的传播性这个概念的呢？"></a>谁提出事务的传播性这个概念的呢？</h2><p>是的，就是spring提出的</p>
+<hr>
+<h2 id="为什么提出呢？"><a href="#为什么提出呢？" class="headerlink" title="为什么提出呢？"></a>为什么提出呢？</h2><p>解决事务嵌套的问题</p>
+<hr>
 <h2 id="什么是事务嵌套？"><a href="#什么是事务嵌套？" class="headerlink" title="什么是事务嵌套？"></a>什么是事务嵌套？</h2><hr>
-<h2 id="事务传播性的分类"><a href="#事务传播性的分类" class="headerlink" title="事务传播性的分类"></a>事务传播性的分类</h2><hr>
-<ul>
-<li>PROPAGATION_REQUIRED</li>
-<li>PROPAGATION_REQUIRES_NEW</li>
-<li>PROPAGATION_SUPPORTS</li>
-<li>PROPAGATION_NOT_SUPPORTED</li>
-<li>PROPAGATION_NEVER</li>
-<li>PROPAGATION_MANDATORY</li>
-<li>PROPAGATION_NESTED</li>
+<h2 id="事务传播性的分类"><a href="#事务传播性的分类" class="headerlink" title="事务传播性的分类"></a>事务传播性的分类</h2><ul>
+<li><p>PROPAGATION_REQUIRED</p>
+<pre><code>spring 默认的事务传播机制。
+外有则合，外无则开</code></pre></li>
+<li><p>PROPAGATION_REQUIRES_NEW</p>
+<pre><code>外挂自开</code></pre></li>
+<li><p>PROPAGATION_SUPPORTS</p>
+<pre><code>随外</code></pre></li>
+<li><p>PROPAGATION_NOT_SUPPORTED</p>
+<pre><code>外挂自不开</code></pre></li>
+<li><p>PROPAGATION_NEVER</p>
+<pre><code>外有则抛，自不开</code></pre></li>
+<li><p>PROPAGATION_MANDATORY</p>
+<pre><code>外无则抛</code></pre></li>
+<li><p>PROPAGATION_NESTED</p>
+<pre><code>回滚灵活</code></pre></li>
 </ul>
+<hr>
 
             <div class="clearfix"></div>
             <hr class="nogutter">

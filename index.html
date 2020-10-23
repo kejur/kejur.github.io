@@ -272,20 +272,22 @@ Git v2.13.0
                 <div class="col-md-8">
                     <p>
                       
-                        谁提出事务的传播性这个概念的呢？
-是的，就是spring提出的
-为什么提出呢？
-解决事务嵌套的问题
+                        谁提出事务的传播性这个概念的呢？是的，就是spring提出的
+
+为什么提出呢？解决事务嵌套的问题
+
 什么是事务嵌套？
 事务传播性的分类
-
 PROPAGATION_REQUIRED
+spring 默认的事务传播机制。
+外有则合，外无则开
 PROPAGATION_REQUIRES_NEW
+外挂自开
 PROPAGATION_SUPPORTS
+随外
 PROPAGATION_NOT_SUPPORTED
+外挂自不开
 PROPAGATION_NEVER
-PROPAGATION_MANDATORY
-PROPAGATION_NESTED
                       
                     </p>
                     
