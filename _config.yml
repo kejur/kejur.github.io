@@ -4,7 +4,7 @@
 
 # Site
 title: Kejur' Park
-subtitle: 欢迎来到 Kejur乐园
+subtitle: 欢迎来到 Kejur 乐园
 description: 喜欢Coding，喜欢民谣，喜欢热闹，喜欢安静
 keywords:
 author: kejur
@@ -13,7 +13,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://kejur.github.io/
+url: https://kejur.github.io
+# url: http://localhost:4000/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -111,6 +112,15 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+# rss: npm install --save hexo-generator-feed
+
+# plugins: hexo-generate-feed
+# #订阅RSS
+# feed:
+#   type: atom
+#   path: atom.xml
+#   limit: false
+
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 theme: TKL

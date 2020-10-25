@@ -53,7 +53,19 @@ TKL主题的初始化到本地启动，根据 [TKL 的 README.md](https://github
 
 很简单，那是因为你没注意看他这个 README.MD 中的  [Guide](https://go.kieran.top/post/45/), 这里边也没什么，就是刚刚做的那些完成后，还有一个 TKL 主题的配置文件要改的，在主题下的 `_config.yml` 修改 `local_search.enable` 为 `true` 就好了
 
-### 7.评论功能
+### 7.LINKS
+
+待探索 ···
+
+### 8.About
+
+待探索 ···
+
+### 9.RSS
+
+待探索 ···
+
+### 10.评论功能
 
 待探索 ···
 
