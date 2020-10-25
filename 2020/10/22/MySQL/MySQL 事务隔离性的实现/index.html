@@ -74,19 +74,52 @@
             <li><a href="/" class="animsition-link" title="Home">Home</a></li>
             <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
             <!-- Dropdown Menu -->
+
+            <!-- works -->
 			 
             <li>
                 <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/" target="_BLANK" class="animsition-link">keeee</a></li>
+                        <li><a href="" target="_BLANK" class="animsition-link">远方的人</a></li>
                     
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">juuuu</a></li>
+                        <li><a href="" target="_BLANK" class="animsition-link">请问你来自哪里</a></li>
                     
                 </ul>
             </li>
             
+
+            <!-- tags -->
             
+        	<li>
+        		<a class="sb-toggle-submenu">Tags<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/tags/HEXO/" class="animsition-link">HEXO<small>(6)</small></a></li>
+				    
+				    <li><a href="/tags/MySQL/" class="animsition-link">MySQL<small>(2)</small></a></li>
+				    
+				    <li><a href="/tags/TKL/" class="animsition-link">TKL<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+            
+            
+            <!-- categories -->
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/博客搭建/" class="animsition-link">博客搭建<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/技术/" class="animsition-link">技术<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+            
+            
+            <!-- links -->
             
             <li>
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
@@ -100,8 +133,11 @@
             </li>
             
         </ul>
+
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
             
             <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
             <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
@@ -190,8 +226,8 @@
       		<p>众所周知，数据库有四种隔离级别，那么这个隔离级别是什么用途呢？</p>
 <p>大家可能对一个场景比较熟悉：做业务功能的时候，产品大大既要求保证业务的并发量，又要保证数据的安全性、一致性。而且还经常对较为复杂的这类场景感到头痛吧？<br>你可能会说不会头痛的 哈哈 优秀！</p>
 <p>那么问题来了，在java代码或其他语言中保证安全性会使用到各种锁，那么数据库保证安全性的是什么呢？没错，你猜对了，就是锁，他也就是数据库隔离性实现的底层！ <strong>隔离就是为了安全！</strong></p>
-<h2 id="数据库锁的分类"><a href="#数据库锁的分类" class="headerlink" title="数据库锁的分类"></a>数据库锁的分类</h2><hr>
-<p>  PS: 我们只考虑 InnoDB 哈</p>
+<hr>
+<h2 id="数据库锁的分类"><a href="#数据库锁的分类" class="headerlink" title="数据库锁的分类"></a>数据库锁的分类</h2><p>  PS: 我们只考虑 InnoDB 哈</p>
 <ul>
 <li><p>共享锁（S Lock）</p>
 </li>
@@ -200,15 +236,15 @@
 </li>
 </ul>
 <p>一个事务获取了一行的 S Lock 时，允许其他事务获取该行的 S Lock, 但不允许其他事务获取该行的 X Lock，<br>那么如果一个事务获取了一行的 X Lock 时，数据库允许其他事务获取到该行的 Slock吗？是否也需要等待？</p>
-<h2 id="一致性非锁定读"><a href="#一致性非锁定读" class="headerlink" title="一致性非锁定读"></a>一致性非锁定读</h2><hr>
-<p>上面说到，如果一个事务获取了一行的 X Lock 时，数据库允许其他事务获取到该行的 Slock吗？这个时候是不需要等待的，但是不需要加锁，因为这时候读取的是行的一个快照。<br>（因为快照是不会被修改的，所以快照是不会加锁的）这种快照读就是一致性非锁定读。每行会有很多快照，那么每次读取的都是哪个快照呢？</p>
+<hr>
+<h2 id="一致性非锁定读"><a href="#一致性非锁定读" class="headerlink" title="一致性非锁定读"></a>一致性非锁定读</h2><p>上面说到，如果一个事务获取了一行的 X Lock 时，数据库允许其他事务获取到该行的 Slock吗？这个时候是不需要等待的，但是不需要加锁，因为这时候读取的是行的一个快照。<br>（因为快照是不会被修改的，所以快照是不会加锁的）这种快照读就是一致性非锁定读。每行会有很多快照，那么每次读取的都是哪个快照呢？</p>
 <p>其实这就和隔离级别关系很大了，各个隔离级别对应读取的快照如下：</p>
 <ul>
 <li>RC（读已提交）：被锁定行被其他事务最新提交的快照数据</li>
 <li>RR（可重复读）：事务开启时的快照数据</li>
 </ul>
-<h2 id="一致性锁定读"><a href="#一致性锁定读" class="headerlink" title="一致性锁定读"></a>一致性锁定读</h2><hr>
-<p>一般我们使用的都是一致性非锁定读，但是有些情况会去锁行，以保证数据逻辑一致性，这就是一致性锁定读。</p>
+<hr>
+<h2 id="一致性锁定读"><a href="#一致性锁定读" class="headerlink" title="一致性锁定读"></a>一致性锁定读</h2><p>一般我们使用的都是一致性非锁定读，但是有些情况会去锁行，以保证数据逻辑一致性，这就是一致性锁定读。</p>
 <p>InnoDB 提供了两种方式：</p>
 <ul>
 <li>读行加排它锁，不允许其他读写事务获取</li>
@@ -216,6 +252,8 @@
 </ul>
 <p>示例如下：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> ... <span class="keyword">for</span> <span class="keyword">update</span>;</span><br><span class="line"><span class="keyword">select</span> ... <span class="keyword">lock</span> <span class="keyword">in</span> <span class="keyword">shared</span> <span class="keyword">mode</span>;</span><br></pre></td></tr></table></figure>
+
+<hr>
 <h2 id="数据库的其他锁"><a href="#数据库的其他锁" class="headerlink" title="数据库的其他锁"></a>数据库的其他锁</h2><ul>
 <li>Gap Lock 间隙锁： 锁定一个范围，但不包含记录本身</li>
 <li>next-key lock ：  也是锁定范围，但包含了记录本身，相当于【行锁 + Gap Lock】</li>
@@ -224,6 +262,7 @@
 <p>RC时，用 <em>for update</em> 进行一致性锁定读某行，事务不关闭，其他事务是可以插入新的行的数据的，所以一致性锁定读期间的多次读取可能会出现 幻读。</p>
 <p><strong>next-key lock</strong> 是怎么解决幻读的呢？</p>
 <p>RR级别下进行上述操作时，加的就是 <em>next-key lock</em> 间隙锁了。锁的范围是 2（正无穷大），当开启 <em>for update</em> 查询时，就对所有行加了 xlock，那么其他事务是不可能有插入数据的情况的。</p>
+<hr>
 <h2 id="Serializable-串行化的实现"><a href="#Serializable-串行化的实现" class="headerlink" title="Serializable 串行化的实现"></a>Serializable 串行化的实现</h2><p>他隔离级别最高，但串行化不是就说是多个事务的操作按顺序执行的。其实是InNoDB会为每个 <em>select</em> 加 <em>lock in shared mode</em> ,那么这些行的数据是肯定不会被获取到Xlock了，也就保证了串行化级别的可靠性。</p>
 
             <div class="clearfix"></div>
@@ -236,8 +275,8 @@
     </a>
     
     
-    <a class="pull-right" href="/2020/10/19/Hexo/Hexo%E6%8E%A2%E7%B4%A2%E5%AD%90%E6%96%87%E4%BB%B6%E5%A4%B9/">
-        Hexo/Hexo探索子文件夹 →
+    <a class="pull-right" href="/2020/10/19/Hexo/Hexo%E6%8E%A2%E7%B4%A2/">
+        Hexo 探索 →
     </a>
     
 </nav>
@@ -369,6 +408,433 @@ $('#intro').find('img').each(function(){
 })(jQuery);
 </script>
 
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
       
