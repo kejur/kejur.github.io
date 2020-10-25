@@ -2,6 +2,7 @@
 title: MySQL 事务的传播性
 date: 2020-10-22 00:50
 tags: MySQL
+categories: 技术
 ---
 
 

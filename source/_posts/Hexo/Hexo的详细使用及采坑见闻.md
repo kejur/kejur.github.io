@@ -1,18 +1,19 @@
 ---
 title: Hexo的详细使用及采坑见闻
 date: 2020-10-23 01:29
-tags: hexo
+tags: HEXO
+categories: 博客搭建
 ---
 
 
-> 原文 [Github Pages部署个人博客](https://sisibeloved.github.io/hexoBlog/2018/04/12/Github-Pages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E7%AF%87/#%E4%BF%AE%E6%94%B9%60_config.yml%60)
+> 原文 [Github Pages部署个人博客搭建](https://sisibeloved.github.io/hexoBlog/2018/04/12/Github-Pages%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-Hexo%E7%AF%87/#%E4%BF%AE%E6%94%B9%60_config.yml%60)
 
 
 ---
 
 ## 前言
 ---
-想在Github上搭建一个个人博客，在网上找了不少的文章，但有的是使用的旧版本，有的语焉不详，最后还是磕磕绊绊地搭起来了，因此写了这篇文章，对自己踩过的坑进行一个总结。水平有限，还请见谅。
+想在Github上搭建一个个人博客搭建，在网上找了不少的文章，但有的是使用的旧版本，有的语焉不详，最后还是磕磕绊绊地搭起来了，因此写了这篇文章，对自己踩过的坑进行一个总结。水平有限，还请见谅。
 
 ## 系统环境
 ---
@@ -52,7 +53,7 @@ master分支保留（个人习惯）。
 > npm install -g hexo-cli
 
 ### 2. 生成Hexo项目
-在你想创建博客的文件夹中初始化Hexo。
+在你想创建博客搭建的文件夹中初始化Hexo。
 
 > hexo init [projectname]
 
@@ -95,7 +96,7 @@ Hexo命令大多可以缩写，如`hexo serve --port 5000`可以缩写成`hexo s
 > hexo s -p [port]
 
 ### 4. 部署
-在博客所在文件夹下：
+在博客搭建所在文件夹下：
 
 ``` s
 npm install hexo-deployer-git --save

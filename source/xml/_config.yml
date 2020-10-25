@@ -1,0 +1,66 @@
+# config
+cover: /img/car.jpg
+logo: /img/k.png
+top_saying:
+- title: YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.
+- content: 永远年轻，永远热泪盈眶 ···
+bottom_saying: 这是我的底线···emm···
+# Content
+excerpt_link: Read More
+
+rss: /atom.xml
+
+tags: /tags
+categories: /categories
+
+highlightjs: vs
+
+#Works
+works:
+- works_name: 远方的人
+- works_name: 请问你来自哪里
+
+#duoshuo name
+duoshuo:
+
+#disqus name
+disqus_shortname:
+
+#fancybox
+fancybox: true
+
+# Miscellaneous
+github: https://github.com/kejur
+twitter: https://twitter.com/
+facebook: https://www.facebook.com/
+google: https://google.com/
+weibo: http://weibo.com/
+
+
+#about  timeline
+timeline:
+- num: 1
+  word: 2020/07/12-个人博客搭建想法诞生
+- num: 2
+  word: 2020/07/13-寻找主题，偶遇 Hexo
+- num: 3
+  word: 2020/09/10-Jekyll对比
+- num: 4
+  word: 2020/10/22-放弃Jekyll
+- num: 5
+  word: More
+
+#Links
+links:
+- name: Kieran
+  link: http://go.kieran.top/
+
+# Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+local_search:
+  enable: false
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 2
