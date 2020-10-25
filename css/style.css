@@ -710,7 +710,7 @@ html.sb-init.sb-active.sb-active-right #projects .filter-item div a {
 	opacity: 1;
 }
 .sb-slidebar {
-	background-color: #151515; /* Background colour. */
+	background-color: #6292d1; /* Background colour. */
 	color: #666; /* Text colour. */
 	font-weight: 700;
 	font-size: 14px;
@@ -3070,13 +3070,15 @@ button.send{
 * Global footer, (all pages)
 ******************************************************* */
 footer {
-	padding:5% 0 0;
-	background:#151515;
-	z-index: 9;
+	padding:1% 0 0;
+	background: #302e2e;;
+	z-index: 5;
 	position: relative;
+	/* bottom: 0px; */
+	/* position: fixed; */
 }
 footer p.m_14 {
-	color:#767D84;
+	color:#0e3964;
 	font-size:14px;
 	line-height:1.8em;
 	margin-top: 2em;
@@ -3146,7 +3148,7 @@ footer .copy {
 }
 footer .copy p {
 	font-size: 12px;
-	color: #767D84;
+	color: #f9f9fa;
 }
 footer .social {
 	float: right;
