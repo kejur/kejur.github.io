@@ -129,5 +129,5 @@ theme: TKL
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:kejur/kejur.github.io.git
+  repo: git@kejur.github.com:kejur/kejur.github.io.git
   branch: gh-pages
