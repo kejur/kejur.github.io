@@ -69,6 +69,43 @@ TKL主题的初始化到本地启动，根据 [TKL 的 README.md](https://github
 
 待探索 ···
 
+### 11.其他爬坑
+#### 1.发布报错 (update 2023.05.10)
+``` vim
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+    Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+    It is also possible that a host key has just been changed.
+    The fingerprint for the RSA key sent by the remote host is
+    SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.
+    Please contact your system administrator.
+    Add correct host key in /c/Users/Administrator/.ssh/known_hosts to get rid of this message.
+    Offending RSA key in /c/Users/Administrator/.ssh/known_hosts:1
+    RSA host key for github.com has changed and you have requested strict checking.
+    Host key verification failed.
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.
+    FATAL Something's wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html
+    Error: Spawn failed
+        at ChildProcess.task.on.code (D:\project\keestep\kejur.github.io\node_modules\hexo-util\lib\spawn.js:51:21)
+        at emitTwo (events.js:126:13)
+        at ChildProcess.emit (events.js:214:7)
+        at ChildProcess.cp.emit (D:\project\keestep\kejur.github.io\node_modules\cross-spawn\lib\enoent.js:34:29)
+        at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)
+```
+`解决方法`：
+>删除 `C:\Users\Administrator\.ssh\known_hosts` 中 `github.com`相关内容
+
+>然后重新 `hexo d -g`
+
+
+
+---
+
 [TKL作者的blog](https://go.kieran.top/)，以示瞻仰
 
 >祝你生活愉快
