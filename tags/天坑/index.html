@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>主题 TKL 采坑及进阶 | Bug&#39; Eden</title>
+  <title>Tag: 天坑 | Bug&#39; Eden</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -198,148 +198,72 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2020-10-25T08:15:00.000Z" itemprop="datePublished">
-          2020-10-25
-      </time>
-    
-    
-    | 
-    <a href='/tags/HEXO/'>HEXO</a>,
-    
-    <a href='/tags/TKL/'>TKL</a>
-    
-    
-</span>
-                <h1>主题 TKL 采坑及进阶</h1>
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/car.jpg) no-repeat center center fixed;background-size: cover">
+        <!-- <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>this is my life</p>
+                        
+
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h3 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h3><p>TKL主题的初始化到本地启动，根据 <a href="https://github.com/SuperKieran/TKL" target="_blank" rel="noopener">TKL 的 README.md</a> 操作即可</p>
-<h3 id="2-更换背景图"><a href="#2-更换背景图" class="headerlink" title="2.更换背景图"></a>2.更换背景图</h3><ol>
-<li>图片放在 <code>themes\TKL\source\img</code> 下</li>
-<li>更新背景图指向：<code>themes\TKL\_config.yml</code> -&gt; <code>cover: /img/bg_img.jpg</code> 改成你的图片</li>
-</ol>
-<h3 id="3-更换logo"><a href="#3-更换logo" class="headerlink" title="3.更换logo"></a>3.更换logo</h3><p>同背景图</p>
-<h3 id="4-更换网页小图标"><a href="#4-更换网页小图标" class="headerlink" title="4.更换网页小图标"></a>4.更换网页小图标</h3><ol>
-<li>将自己的图标文件放在 <code>themes\TKL\source\img</code> 下，不一定非得 <code>.ico</code> 格式才可以</li>
-<li>全局查找 <code>favicon.ico</code> 的使用处，替换为你想要的图标</li>
-</ol>
-<h3 id="5-右侧导航栏显示-TAGS"><a href="#5-右侧导航栏显示-TAGS" class="headerlink" title="5.右侧导航栏显示 TAGS"></a>5.右侧导航栏显示 TAGS</h3><p>你会发现按照 <a href="https://github.com/SuperKieran/TKL" target="_blank" rel="noopener">TKL 的 README.md</a> 所提示的开启 <code>TAG</code>和<code>CATEGORY</code> 后，只有 <code>CATEGORY</code> 出来了。</p>
-<ul>
-<li><p>原因：<br>  TKL 原代码有误</p>
-</li>
-<li><p>解决：<br>  <code>/themes/TKL\layout/_partial/header.ejs</code> 中 <code>&lt;!-- Dropdown Menu --&gt;</code> 的下方合适位置添加代码：</p>
-<blockquote>
-<p>其实就是修改了 该文件下 Categories 相关代码</p>
-</blockquote>
-<pre><code>&lt;!-- tags --&gt;
-&lt;% if (site.tags.length){ %&gt;
-&lt;li&gt;
-    &lt;a class=&quot;sb-toggle-submenu&quot;&gt;Tags&lt;span class=&quot;sb-caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-    &lt;ul class=&quot;sb-submenu&quot;&gt;
-        &lt;% site.tags.sort(&apos;name&apos;).each(function(item){ %&gt;
-        &lt;li&gt;&lt;a href=&quot;&lt;%- config.root %&gt;&lt;%- item.path %&gt;&quot; class=&quot;animsition-link&quot;&gt;&lt;%= item.name %&gt;&lt;small&gt;(&lt;%= item.posts.length %&gt;)&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;% }); %&gt;
-    &lt;/ul&gt;
-&lt;/li&gt;
-&lt;% } %&gt;</code></pre></li>
-</ul>
-<h3 id="6-查找功能"><a href="#6-查找功能" class="headerlink" title="6.查找功能"></a>6.查找功能</h3><p>按照 TKL 所提示的 <a href="https://github.com/SuperKieran/hexo-generator-search-zip" target="_blank" rel="noopener">hexo-generator-search-zip</a> 搞完后，public中的 search 相关文件是有了，但是功能怎么出来呢？</p>
-<p>很简单，那是因为你没注意看他这个 README.MD 中的  <a href="https://go.kieran.top/post/45/" target="_blank" rel="noopener">Guide</a>, 这里边也没什么，就是刚刚做的那些完成后，还有一个 TKL 主题的配置文件要改的，在主题下的 <code>_config.yml</code> 修改 <code>local_search.enable</code> 为 <code>true</code> 就好了</p>
-<h3 id="7-LINKS"><a href="#7-LINKS" class="headerlink" title="7.LINKS"></a>7.LINKS</h3><p>待探索 ···</p>
-<h3 id="8-About"><a href="#8-About" class="headerlink" title="8.About"></a>8.About</h3><p>待探索 ···</p>
-<h3 id="9-RSS"><a href="#9-RSS" class="headerlink" title="9.RSS"></a>9.RSS</h3><p>待探索 ···</p>
-<h3 id="10-评论功能"><a href="#10-评论功能" class="headerlink" title="10.评论功能"></a>10.评论功能</h3><p>待探索 ···</p>
-<h3 id="11-其他爬坑"><a href="#11-其他爬坑" class="headerlink" title="11.其他爬坑"></a>11.其他爬坑</h3><h4 id="1-发布报错-update-2023-05-10"><a href="#1-发布报错-update-2023-05-10" class="headerlink" title="1.发布报错 (update 2023.05.10)"></a>1.发布报错 (update 2023.05.10)</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line">@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @</span><br><span class="line">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span><br><span class="line">IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!</span><br><span class="line">Someone could <span class="keyword">be</span> eavesdropping <span class="keyword">on</span> you <span class="keyword">right</span> now (man-in-the-middle attack)!</span><br><span class="line">It <span class="keyword">is</span> also possible that <span class="keyword">a</span> host key <span class="built_in">has</span> just been changed.</span><br><span class="line">The fingerprint <span class="keyword">for</span> the RSA key sent by the remote host <span class="keyword">is</span></span><br><span class="line">SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.</span><br><span class="line">Please contact your <span class="built_in">system</span> administrator.</span><br><span class="line">Add correct host key in /<span class="keyword">c</span>/Users/Administrator/.ssh/known_hosts <span class="keyword">to</span> <span class="built_in">get</span> rid of this message.</span><br><span class="line">Offending RSA key in /<span class="keyword">c</span>/Users/Administrator/.ssh/known_host<span class="variable">s:1</span></span><br><span class="line">RSA host key <span class="keyword">for</span> github.<span class="keyword">com</span> <span class="built_in">has</span> changed <span class="built_in">and</span> you have requested strict checking.</span><br><span class="line">Host key verification failed.</span><br><span class="line">fata<span class="variable">l:</span> Could not <span class="keyword">read</span> from remote repository.</span><br><span class="line"></span><br><span class="line">Please <span class="keyword">make</span> sure you have the correct access rights</span><br><span class="line"><span class="built_in">and</span> the repository <span class="built_in">exists</span>.</span><br><span class="line">FATAL Something<span class="string">'s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html</span></span><br><span class="line"><span class="string">Error: Spawn failed</span></span><br><span class="line"><span class="string">    at ChildProcess.task.on.code (D:\project\keestep\kejur.github.io\node_modules\hexo-util\lib\spawn.js:51:21)</span></span><br><span class="line"><span class="string">    at emitTwo (events.js:126:13)</span></span><br><span class="line"><span class="string">    at ChildProcess.emit (events.js:214:7)</span></span><br><span class="line"><span class="string">    at ChildProcess.cp.emit (D:\project\keestep\kejur.github.io\node_modules\cross-spawn\lib\enoent.js:34:29)</span></span><br><span class="line"><span class="string">    at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)</span></span><br></pre></td></tr></table></figure>
-<p><code>解决方法</code>：</p>
-<blockquote>
-<p>删除 <code>C:\Users\Administrator\.ssh\known_hosts</code> 中 <code>github.com</code>相关内容</p>
-</blockquote>
-<blockquote>
-<p>然后重新 <code>hexo d -g</code></p>
-</blockquote>
-<hr>
-<p><a href="https://go.kieran.top/" target="_blank" rel="noopener">TKL作者的blog</a>，以示瞻仰</p>
-<blockquote>
-<p>祝你生活愉快</p>
-</blockquote>
-
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
-    
-    <a class="pull-left" href="/2022/03/13/LeetCode/01%20%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/" style="float: left;">
-        ← LeetCode-01-两数相加
-    </a>
-    
-    
-    <a class="pull-right" href="/2020/10/23/Hexo/Hexo%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BD%BF%E7%94%A8%E5%8F%8A%E9%87%87%E5%9D%91%E8%A7%81%E9%97%BB/">
-        Hexo的详细使用及采坑见闻 →
-    </a>
-    
-</nav>
-
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
-
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
-
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
-
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
-
-</script>
-</div>
+        <div class="herofade beige-dk"></div> -->
     </div>
 </section>
 
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
+<!-- ============================ END Hero Image =========================== -->
+
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2023/07/30/Life/惊天！Gmail被停用！/">惊天！Gmail被停用！</a></h4>
+                            
+                            <p><time datetime="2023-07-30T08:15:00.000Z"><a href="/2023/07/30/Life/惊天！Gmail被停用！/">2023-07-30</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <nav class="pagination" role="pagination">
+            
+            
+        </nav>
+    </div>
+</section>
+
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>永远年轻，永远热泪盈眶</p>
+        </div>
+    </div>
+</section>
       
 <!-- ============================ Footer =========================== -->
 
