@@ -328,8 +328,8 @@
 <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="1-Github发送邮件-编译未通过"><a href="#1-Github发送邮件-编译未通过" class="headerlink" title="1. Github发送邮件 - 编译未通过"></a>1. Github发送邮件 - 编译未通过</h3><p>The page build failed for the master branch with the following error:</p>
 <p>The tag fancybox on line 77 in themes/landscape/README.md is not a recognized Liquid tag.</p>
 <p>见修改_config.yml<br>选择Github Pages分支<br>不要使用Git直接推送，应该在_config.yml中设置deploy的配置，然后使用 <code>hexo d -g</code> 命令进行推送</p>
-<h3 id="2-hexo-d-g失败"><a href="#2-hexo-d-g失败" class="headerlink" title="2. hexo d -g失败"></a>2. hexo d -g失败</h3><p>error: failed to execute prompt script (exit code 1)<br>fatal: could not read Username for ‘<a href="https://github.com&#39;" target="_blank" rel="noopener">https://github.com&#39;</a>: No error<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>见修改_config.yml<br>将HTTPS协议改成Git协议，注意github.com后面，HTTPS是/，Git是:</p>
-
+<h3 id="2-hexo-d-g-失败"><a href="#2-hexo-d-g-失败" class="headerlink" title="2. hexo d -g 失败"></a>2. hexo d -g 失败</h3><p>error: failed to execute prompt script (exit code 1)<br>fatal: could not read Username for ‘<a href="https://github.com&#39;" target="_blank" rel="noopener">https://github.com&#39;</a>: No error<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>见修改_config.yml<br>将HTTPS协议改成Git协议，注意github.com后面，HTTPS是/，Git是:(没错就是冒号)</p>
+<h3 id="3-hexo-d-g-自定义域名失效"><a href="#3-hexo-d-g-自定义域名失效" class="headerlink" title="3. hexo d -g 自定义域名失效"></a>3. hexo d -g 自定义域名失效</h3>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
